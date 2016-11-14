@@ -11,18 +11,18 @@ class RoverSpec extends FlatSpec with ShouldMatchers {
 
   val plateau = Plateau(Location(0,0), Location(10,10))
 
-  "Move instruction" should "should move rover" in {
+  "Move instruction" should "move rover" in {
     val nextPosition = RoverPosition(Location(1,3), NORTH).next(plateau, MOVE)
     nextPosition shouldEqual RoverPosition(Location(1,4), NORTH)
   }
 
-  "Move instruction" should "should not move rover out of plateau " in {
+  "Move instruction" should "not move rover out of plateau " in {
     val nextPosition = RoverPosition(Location(10,10), NORTH).next(plateau, MOVE)
     nextPosition shouldEqual RoverPosition(Location(10,10), NORTH)
 
   }
 
-  "Spin instruction" should "should turn rover" in {
+  "Spin instruction" should "turn rover" in {
     val initialPosition = RoverPosition(Location(1,3), NORTH)
 
     //90 degree turn

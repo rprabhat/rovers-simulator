@@ -11,7 +11,7 @@ import parser.InputParser._
   */
 class InputParserSpec  extends FlatSpec with ShouldMatchers {
 
-  "ExpeditionParser" should " extract expedition" in {
+  "ExpeditionParser" should " extract expedition detail" in {
 
     val input = """5 5
                   |1 2 N

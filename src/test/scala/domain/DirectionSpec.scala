@@ -12,12 +12,12 @@ class DirectionSpec extends FlatSpec with ShouldMatchers {
 
   val plateau = Plateau(Location(0,0), Location(10,10))
 
-  "spin " should "should turn rover direction" in {
+  "spin " should "turn rover direction" in {
     NORTH.turn(SPIN_LEFT) shouldEqual WEST
     NORTH.turn(SPIN_RIGHT) shouldEqual EAST
   }
 
-  "spin 360 degree " should "should turn camera back to orignal direction" in {
+  "spin 360 degree " should "turn camera back to orignal direction" in {
     NORTH.turn(SPIN_LEFT).turn(SPIN_LEFT).turn(SPIN_LEFT).turn(SPIN_LEFT) shouldEqual NORTH
     NORTH.turn(SPIN_RIGHT).turn(SPIN_RIGHT).turn(SPIN_RIGHT).turn(SPIN_RIGHT) shouldEqual NORTH
   }
